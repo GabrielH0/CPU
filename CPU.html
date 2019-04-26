@@ -1,0 +1,93 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>CPU</title>
+    <link href="css.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="util.js"></script>
+    <script type="text/javascript" src="memoria.js"></script>
+    <script type="text/javascript" src="cpu.js"></script>
+    <script type="text/javascript" src="texto.js"></script>
+
+
+  </head>
+  <body>
+  <script type="text/javascript">
+  	window.onload=function(){
+  		init()
+  		show()
+  	}
+  </script>	
+	  <div id="all">
+	    <div id="input" >
+		    <textarea type="text" id="caixa" rows="28" cols="50" maxlength="1000" ></textarea>
+		    <button onclick="converter('a');atualizar();">Submit</button>
+	    </div>
+	    <div id=reg>
+	    	<table id="c">
+	    		<tr>
+	    			<td>r0</td>
+	    			<td>r1</td>
+	    			<td>r2</td>
+	    			<td>r3</td>
+	    		</tr>
+	    		<tr>
+	    			<td id="R0"></td>
+	    			<td id="R1"></td>
+	    			<td id="R2"></td>
+	    			<td id="R3"></td>
+	    		<tr>
+		    		<td>MBR</td>
+	    			<td>MAR</td>
+	    			<td>PC</td>
+					<td>IR</td>
+	    		</tr>
+	    		<tr>
+	    			<td id="mbr"></td>
+	    			<td id="mar"></td>
+	    			<td id="PC"></td>
+	    			<td id="IR"></td>
+	    		</tr>
+	    		<tr>
+	    			<td>IMM</td>
+	    			<td>RO0</td>
+	    			<td>RO1</td>
+	    			<td>RO2</td>
+	    		</tr>
+	    		<tr>
+	    			<td id="IMM"></td>
+	    			<td id="ro0"></td>
+	    			<td id="ro1"></td>
+	    			<td id="ro2"></td>
+	    			
+	    		</tr>
+	    			<td>E</td>
+	    			<td>L</td>
+	    			<td>G</td>
+	    		</tr>
+	    		<tr>
+
+	    			<td id="E"></td>
+	    			<td id="L"></td>
+	    			<td id="G"></td>
+	    		</tr>
+	    		
+	    	</table>
+	    	<button onclick="ciclo()">>></button>
+	    </div>
+
+	 
+		 
+	    <div id="memoria">
+	    	<table id="MEM" border="1" >
+
+		   	</table>
+	    </div>
+	    <div id="alterar">
+			<input type="text" id="posição">posição
+			<input type="text" id="valor">valor
+			<button onclick="alter()">alterar</button>
+	    </div>
+    </div>
+  </body>
+</html>
